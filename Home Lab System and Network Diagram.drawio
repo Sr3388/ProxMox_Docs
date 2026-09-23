@@ -1,0 +1,118 @@
+<mxfile host="Electron">
+  <diagram name="Detailed Home Lab Network" id="detailed-lab">
+    <mxGraphModel dx="2020" dy="2201" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="internet" parent="1" style="shape=cloud;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=16;" value="" vertex="1">
+          <mxGeometry height="90" width="180" x="790" y="-230" as="geometry" />
+        </mxCell>
+        <mxCell id="router" parent="1" style="shape=mxgraph.cisco.routers.router;whiteSpace=wrap;html=1;fillColor=#e6e6e6;strokeColor=#666666;fontStyle=1;" value="" vertex="1">
+          <mxGeometry height="60" width="150" x="805" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="fw" parent="1" style="shape=mxgraph.networks.firewall;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=14;" value="" vertex="1">
+          <mxGeometry height="50" width="130" x="815" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="switch" parent="1" style="shape=mxgraph.cisco.switches.2960;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" value="Managed Core Switch&lt;br&gt;802.1Q Trunk&lt;br&gt;&lt;br&gt;VLAN-aware switching" vertex="1">
+          <mxGeometry height="100" width="270" x="745" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="ap" parent="1" style="shape=mxgraph.networks.wireless_router;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" value="Wi‑Fi 6 Access Point&lt;br&gt;Multiple SSIDs&lt;br&gt;&lt;br&gt;SSID → VLAN mapping&lt;br&gt;Management / Home / Lab / IoT&lt;br&gt;&lt;br&gt;SSID 1 &amp;gt; VLAN 10 : Management&lt;br&gt;SSID 2 &amp;gt; VLAN 20 : Servers / Lab&lt;br&gt;SSID 3 &amp;gt;&amp;nbsp;&amp;nbsp;VLAN 30 :&amp;nbsp; IoT&lt;br&gt;SSID 4 &amp;gt; VLAN 40 :&amp;nbsp; Home Wi‑Fi" vertex="1">
+          <mxGeometry height="159" width="300" x="1140" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="vlans" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;" value="NETWORK SEGMENTATION&lt;div&gt;&lt;br&gt;Subnet&amp;nbsp; on: 10.10.x.0/24&lt;br&gt;&lt;br&gt;VLAN 10 : Management&lt;br&gt;VLAN 20 : Servers / Lab&lt;br&gt;VLAN 30 : IoT&lt;br&gt;VLAN 40 : Home Wi‑Fi&lt;br&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="270" x="400" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster" parent="1" style="swimlane;horizontal=0;rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=18;" value="PROXMOX VE CLUSTER" vertex="1">
+          <mxGeometry height="390" width="1320" x="100" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" parent="cluster" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="NODE 1&lt;br&gt;&lt;br&gt;Proxmox VE&lt;br&gt;Management: 10.10.1.x&lt;br&gt;────────────────&lt;br&gt;Ubuntu K3s Node 1&lt;br&gt;VMs / LXCs&lt;br&gt;&lt;br&gt;Pi-hole / Portainer&lt;br&gt;Other workloads" vertex="1">
+          <mxGeometry height="225" width="300" x="90" y="107.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="cluster" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="NODE 2&lt;br&gt;&lt;br&gt;Proxmox VE&lt;br&gt;Management: 10.10.1.x&lt;br&gt;────────────────&lt;br&gt;Ubuntu K3s Node 2&lt;br&gt;VMs / LXCs&lt;br&gt;&lt;br&gt;Grafana / Prometheus&lt;br&gt;Other workloads" vertex="1">
+          <mxGeometry height="225" width="300" x="520" y="107.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="cluster" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" value="NODE 3&lt;br&gt;&lt;br&gt;Proxmox VE&lt;br&gt;Management: 10.10.1.x&lt;br&gt;────────────────&lt;br&gt;Ubuntu K3s Node 3&lt;br&gt;VMs / LXCs&lt;br&gt;&lt;br&gt;Uptime Kuma&lt;br&gt;Additional workloads" vertex="1">
+          <mxGeometry height="225" width="310" x="950" y="107.5" as="geometry" />
+        </mxCell>
+        <mxCell id="storage" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;" value="Shared / Local Storage&lt;br&gt;&lt;br&gt;NAS / Backups&lt;br&gt;&lt;br&gt;Proxmox storage targets" vertex="1">
+          <mxGeometry height="130" width="250" x="1480" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;" value="&lt;b&gt;LEGEND&lt;br&gt;&lt;/b&gt;&lt;br&gt;🔵 Network / Compute&lt;br&gt;🟢 Services / Access&lt;br&gt;🟣 Segmentation &lt;br&gt;🔴 Security&lt;br&gt;🟡 Switching / VLAN" vertex="1">
+          <mxGeometry height="150" width="250" x="1610" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="internet" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="IbeaxF6NokDUPWEJqPU9-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="router" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;strokeWidth=2;" target="fw">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="fw" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;strokeWidth=2;" target="switch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="switch" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;strokeWidth=2;" target="cluster">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="switch" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;strokeWidth=2;" target="ap">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="vlans" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=none;" target="switch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="n1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=none;" target="n2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="n2" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=none;" target="n3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="cluster" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=block;" target="storage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IbeaxF6NokDUPWEJqPU9-1" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;🔥 pfSense Firewall&lt;/span&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;LAN: 10.10.1.1/24&lt;/span&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;VLAN Gateway / Rules / NAT&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="980" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="IbeaxF6NokDUPWEJqPU9-2" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;&lt;b&gt;Second&amp;nbsp;&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: light-dark(rgb(236, 236, 236), rgb(34, 34, 34)); color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-weight: 700;&quot;&gt;Router for Home Lab&lt;/span&gt;&lt;/div&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Routing / NAT&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="110" x="990" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="IbeaxF6NokDUPWEJqPU9-3" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;☁ INTERNET&lt;/span&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;WAN / ISP&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="130" x="1000" y="-205" as="geometry" />
+        </mxCell>
+        <mxCell id="IbeaxF6NokDUPWEJqPU9-12" edge="1" parent="1" source="IbeaxF6NokDUPWEJqPU9-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="router" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IbeaxF6NokDUPWEJqPU9-5" parent="1" style="shape=mxgraph.cisco.routers.router;whiteSpace=wrap;html=1;fillColor=#e6e6e6;strokeColor=#666666;fontStyle=1;" value="" vertex="1">
+          <mxGeometry height="60" width="150" x="805" y="-10" as="geometry" />
+        </mxCell>
+        <mxCell id="IbeaxF6NokDUPWEJqPU9-6" edge="1" parent="1" source="IbeaxF6NokDUPWEJqPU9-5" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="router">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="879.29" y="-30" as="sourcePoint" />
+            <mxPoint x="879.29" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IbeaxF6NokDUPWEJqPU9-8" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;&lt;b&gt;First&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: light-dark(rgb(236, 236, 236), rgb(34, 34, 34)); color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-weight: 700;&quot;&gt;Router and Firewall for Home services&lt;/span&gt;&lt;/div&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;WAN Gateway&lt;/span&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Routing / NAT&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="110" x="990" y="-50" as="geometry" />
+        </mxCell>
+        <mxCell id="IbeaxF6NokDUPWEJqPU9-13" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;font&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;WAN: DHCP / ISP&lt;/span&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;LAN: 192.168.1.1/24&lt;/span&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;Gateway / Rules / NAT&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="220" x="990" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IbeaxF6NokDUPWEJqPU9-14" parent="1" style="shape=mxgraph.networks.firewall;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=14;" value="" vertex="1">
+          <mxGeometry height="40" width="90" x="835" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="LijEdtRtsRmPIaOwlrGd-1" edge="1" parent="1" source="IbeaxF6NokDUPWEJqPU9-5" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="980" y="340" as="sourcePoint" />
+            <mxPoint x="620" y="20" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LijEdtRtsRmPIaOwlrGd-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="500" y="-10" as="geometry" />
+        </mxCell>
+        <mxCell id="LijEdtRtsRmPIaOwlrGd-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="to Home Devices" vertex="1">
+          <mxGeometry height="30" width="60" x="683" y="5" as="geometry" />
+        </mxCell>
+        <mxCell id="LijEdtRtsRmPIaOwlrGd-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Smartphones, Laptop" vertex="1">
+          <mxGeometry height="30" width="60" x="530" y="5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
