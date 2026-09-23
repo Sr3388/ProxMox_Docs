@@ -1,5 +1,6 @@
-# ProxMox_Docs
-ProxMox HomeLab Docs
+# Proxmox_Docs
+
+Proxmox HomeLab Docs
 
 
 This repository documents my personal home lab, used for testing and learning. 
