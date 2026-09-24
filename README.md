@@ -5,11 +5,11 @@ Proxmox HomeLab Docs
 
 This repository documents my personal home lab, used for testing and learning. 
 
-It includes a Proxmox cluster, VMs, containers, networking experiments, and monitoring. 
+The Tech used includes Proxmox, pfSense, Ubuntu Server 26.04, VMs, K3s, Ansible, Grafana, Prometheus, Pi-hole, Portainer, and Uptime Kuma. 
+It is used for system and networking experiments, and monitoring. 
 
-The Tech used includes Proxmox, pfSense, Ubuntu Server 26.04, K3s, Ansible, Grafana, Prometheus, Pi-hole, Portainer, and Uptime Kuma. 
-
-Description:
+Detailed Description:
+---------------------
 
 - 1° Headless Server: Lenovo ThinkCentre M910q
    *	Proxmox hypervisor (Node 1), VMs, 
@@ -34,6 +34,7 @@ Description:
    *	Router and firewall on pfSense 
 
 Hardware
+--------
 
 - NAS Storage: RAID 1 with 2x 4 TB HDDs
 - Primary managed switch: 2.5Gb/s + 10 Gb/s SPF, provides VLAN segmentation, PoE, and Link Aggregation (LAG) for increased bandwidth and redundancy.
@@ -44,6 +45,7 @@ Hardware
 - KVM: for shared monitor, mouse and keyboard across all the servers when directly connected
 
 Software
+--------
 
 - Proxmox VE: 3-node cluster across 3 physical hosts with High Availability (HA), quorum management and split-brain  prevention
 - Multiple VMs: Ubuntu Server (CLI only), Win Server 2025, Mint Client, SUSE Server & Client 
@@ -61,4 +63,4 @@ NB: This is a living project and will evolve over time.
 
 
 
- -- 23 Sept 2026 --
+ -- 24 Sept 2026 --
