@@ -28,7 +28,8 @@ Detailed Description:
    *	Kubernetes (node 3, for High Availability)
 
 - 4° Headless Server: Ugreen: 
-   *	TrueNAS handling the NAS Storage 
+   *	Currently on Ugreen proprietary SW, handling the NAS Storage.
+   *	Next steps will be to replace Ugreen SW with TrueNAS 
 
 - 5° Headless Server: HP EliteDesk 800 mini: 
    *	Router and firewall on pfSense 
