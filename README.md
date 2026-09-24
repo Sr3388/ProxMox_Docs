@@ -54,11 +54,11 @@ Software
 --------
 
 - Proxmox VE: 3-node cluster across 3 physical hosts with High Availability (HA), quorum management and split-brain  prevention
-- Multiple VMs: Ubuntu Server (CLI only), Win Server 2025, Mint Client, SUSE Server & Client 
+- Multiple VMs: Ubuntu Server (CLI only), Win Server 2025, Mint Client, SUSE Server & Client, Fortinet Firewall (for tests), OPNsense (for tests)
 - Multiple Containers on Docker and Kubernetes with Portainer
 - Network: Pi-hole (local DNS), Nginx (Reverse Proxy)
 - Monitoring software: Grafana + Prometheus, Uptime Kuma
-- Firewall and router OS: pfSense and OPNsense on a test machine
+- Firewall and router OS: pfSense ver 2.9
 
 
 Also, see the included network diagram for the current setup. 
