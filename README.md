@@ -11,7 +11,7 @@ It is used for system and networking experiments, and monitoring.
 Detailed Description:
 ---------------------
 
-- 1° Headless Server: Lenovo ThinkCentre M910q
+- 1° Headless Server: Lenovo ThinkCentre M910q 
    *	Proxmox hypervisor (Node 1), VMs, 
    *	Ubuntu Server 26.05 (CLI only) running 
    *	Kubernetes (node 1) handling 
@@ -27,16 +27,21 @@ Detailed Description:
    *	Proxmox hypervisor (Node 3), with Containers & VMs
    *	Kubernetes (node 3, for High Availability)
 
-- 4° Headless Server: Ugreen: 
-   *	Currently on Ugreen proprietary SW, handling the NAS Storage.
-   *	Next steps will be to replace Ugreen SW with TrueNAS 
-
-- 5° Headless Server: HP EliteDesk 800 mini: 
+- 4° Headless Router/Firewall Server: HP EliteDesk 800 mini:  
    *	Router and firewall on pfSense 
 
+- 5° Headless NAS Server: UGREEN   
+   *	Currently on UGREEN proprietary SW (UGOS Pro), handling the NAS Storage.
+   *	Next steps will be to replace Ugreen SW with TrueNAS
+     
 Hardware
 --------
 
+- 1° Headless Server: Lenovo ThinkCentre M910q: Intel i7, 16 GB RAM, 256 GB SSD
+- 2° Headless Server: Lenovo ThinkCentre M710q: Intel i7, 16 GB RAM, 256 GB SSD
+- 3° Headless Server: Lenovo ThinkCentre M910q: Intel i7, 16 GB RAM, 256 GB SSD
+- 4° Headless Router/Firewall Server: HP EliteDesk 800 mini: Intel i5, 8 GB RAM, 240 GB SSD
+- 5° NAS Server: UGREEN NASync DH2300: ARM proc. with 8 cores, 2.2 GHz, 4 GB RAM, 32 GB eMMC System storage, 2x SATA bays, 1x 1GbE port, USB-C
 - NAS Storage: RAID 1 with 2x 4 TB HDDs
 - Primary managed switch: 2.5Gb/s + 10 Gb/s SPF, provides VLAN segmentation, PoE, and Link Aggregation (LAG) for increased bandwidth and redundancy.
 - Secondary unmanaged switch: additional network ports for standard devices (no VLAN or aggregation) 
