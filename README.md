@@ -9,9 +9,53 @@ It includes a Proxmox cluster, VMs, containers, networking experiments, and moni
 
 The Tech used includes Proxmox, pfSense, Ubuntu Server 26.04, K3s, Ansible, Grafana, Prometheus, Pi-hole, Portainer, and Uptime Kuma. 
 
-See the included network diagram for the current setup. 
+Description:
 
-This is a living project and will evolve over time.
+- 1° Headless Server: Lenovo ThinkCentre M910q
+   *	Proxmox hypervisor (Node 1), VMs, 
+   *	Ubuntu Server 26.05 (CLI only) running 
+   *	Kubernetes (node 1) handling 
+   *	Containers (Grafana, PiHole, Podman, Tailscale, Nginx, Portainer) 
+
+- 2° Headless Server: Lenovo ThinkCentre M710q: 
+   *	Proxmox hypervisor (Node 2) with 
+   *	Ubuntu Server 26 (CLI only) running 
+   *	Kubernetes (node 2, for High Availability) handling 
+   *	Containers and VMs
+
+- 3° Headless Server: Lenovo ThinkCentre M910q: 
+   *	Proxmox hypervisor (Node 3), with Containers & VMs
+   *	Kubernetes (node 3, for High Availability)
+
+- 4° Headless Server: Ugreen: 
+   *	TrueNAS handling the NAS Storage 
+
+- 5° Headless Server: HP EliteDesk 800 mini: 
+   *	Router and firewall on pfSense 
+
+Hardware
+
+- NAS Storage: RAID 1 with 2x 4 TB HDDs
+- Primary managed switch: 2.5Gb/s + 10 Gb/s SPF, provides VLAN segmentation, PoE, and Link Aggregation (LAG) for increased bandwidth and redundancy.
+- Secondary unmanaged switch: additional network ports for standard devices (no VLAN or aggregation) 
+- Dedicated wireless Access Point with multiple SSIDs mapped to separate VLANs & subnets.
+- Patch panel: For structured Ethernet cabling
+- Two PDUs: Redundant power management and protection
+- KVM: for shared monitor, mouse and keyboard across all the servers when directly connected
+
+Software
+
+- Proxmox VE: 3-node cluster across 3 physical hosts with High Availability (HA), quorum management and split-brain  prevention
+- Multiple VMs: Ubuntu Server (CLI only), Win Server 2025, Mint Client, SUSE Server & Client 
+- Multiple Containers on Docker and Kubernetes with Portainer
+- Network: Pi-hole (local DNS), Nginx (Reverse Proxy)
+- Monitoring software: Grafana + Prometheus, Uptime Kuma
+- Firewall and router OS: pfSense and OPNsense on a test machine
+
+
+Also, see the included network diagram for the current setup. 
+
+NB: This is a living project and will evolve over time.
 
 
  -- 23 Sept 2026 --
