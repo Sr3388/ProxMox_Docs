@@ -55,7 +55,10 @@ Software
 
 Also, see the included network diagram for the current setup. 
 
+
+
 NB: This is a living project and will evolve over time.
+
 
 
  -- 23 Sept 2026 --
