@@ -11,13 +11,13 @@ It is used for system and networking experiments, and monitoring.
 Detailed Description:
 ---------------------
 
-- 1° Headless Server: Lenovo ThinkCentre M910q 
+- 1° Headless Server: Lenovo ThinkCentre M710:
    *	Proxmox hypervisor (Node 1), VMs, 
    *	Ubuntu Server 26.05 (CLI only) running 
    *	Kubernetes (node 1) handling 
    *	Containers (Grafana, PiHole, Podman, Tailscale, Nginx, Portainer) 
 
-- 2° Headless Server: Lenovo ThinkCentre M710q: 
+- 2° Headless Server: Lenovo ThinkCentre M710: 
    *	Proxmox hypervisor (Node 2) with 
    *	Ubuntu Server 26 (CLI only) running 
    *	Kubernetes (node 2, for High Availability) handling 
@@ -41,10 +41,10 @@ Detailed Description:
 Hardware
 --------
 
-- 1° Headless Server: Lenovo ThinkCentre M910q: Intel i7, 16 GB RAM, 256 GB SSD
-- 2° Headless Server: Lenovo ThinkCentre M710q: Intel i5, 16 GB RAM, 240 GB SSD
+- 1° Headless Server: Lenovo ThinkCentre M710: Intel i7, 16 GB RAM, 256 GB SSD
+- 2° Headless Server: Lenovo ThinkCentre M710: Intel i5, 16 GB RAM, 256 GB SSD
 - 3° Headless Server: Lenovo ThinkCentre M910q: Intel i7, 8 GB RAM, 240 GB SSD
-- 3° Headless Server: Lenovo ThinkCentre M910q: Intel i7, 16 GB RAM, 256 GB SSD
+- 3° Headless Server: Lenovo ThinkCentre M910q: Intel i7, 16 GB RAM, 512 GB SSD
 - 5° Headless Router/Firewall Server: HP EliteDesk 800 mini: Intel i5, 8 GB RAM, 240 GB SSD
 - 6° Headless NAS Server: UGREEN NASync DH2300: ARM proc. with 8 cores, 2.2 GHz, 4 GB RAM, 32 GB eMMC System storage, 2x SATA bays, 1x 1GbE port, USB-C
 - NAS Storage: RAID 1 with 2x 4 TB HDDs
