@@ -28,7 +28,8 @@ Detailed Description:
    *	Kubernetes (node 3, for High Availability)
  
 - 4° Headless Server: Lenovo ThinkCentre M910q: 
-   *	SOC / SIEM (Wazuh) monitoring pfSense, Proxmox, Linux, Kubernetes and Windows endpoints, with centralized security events, vulnerability detection and alerting.
+   *	SOC / SIEM (Wazuh) monitoring pfSense and Proxmox.
+   *	Next step will be to also monitor all Linux VMs, Kubernetes and Windows endpoints, with centralized security events, vulnerability detection and alerting.
 
 - 5° Headless Router/Firewall Server: HP EliteDesk 800 mini:  
    *	Router and firewall on pfSense 
