@@ -14,7 +14,7 @@ Detailed Description:
 - 1° Headless Router/Firewall Server: HP EliteDesk 800 mini:  
    *	Router and firewall on pfSense 
 
-- 2° Load Balancer: EliteDesk 800 G1 Mini
+- 2° Load Balancers: EliteDesk 800 G1 Mini
    *  HAProxy deployed across 3 VMs simulating 3 independent Load Balancers for High Availability and redundancy.
 
 - 3° Headless Server: Lenovo ThinkCentre M710:
@@ -51,6 +51,10 @@ Hardware
 - 5° Headless Server: Lenovo ThinkCentre M910q: Intel i7, 8 GB RAM, 240 GB SSD
 - 6° Headless Server: Lenovo ThinkCentre M910q: Intel i7, 16 GB RAM, 512 GB SSD
 - 7° Headless NAS Server: UGREEN NASync DH2300: ARM proc. with 8 cores, 2.2 GHz, 4 GB RAM, 32 GB eMMC System storage, 2x SATA bays, 1x 1GbE port, USB-C
+  
+- Router / Access Point: TP-Link TL-WA3001 AS3000Mbps
+- Primary managed switch: KeepLiNK 8x 2.5G + 1x 10G SFP  
+- Secondary unmanaged switch: NICGIGA 8x 2.5G + 2x 10G SFP+
 - NAS Storage: RAID 1 with 2x 4 TB HDDs
 - Primary managed switch: 2.5Gb/s + 10 Gb/s SPF, provides VLAN segmentation, PoE, and Link Aggregation (LAG) for increased bandwidth and redundancy.
 - Secondary unmanaged switch: additional network ports for standard devices (no VLAN or aggregation) 
@@ -62,12 +66,14 @@ Hardware
 Software
 --------
 
+- Firewall and router OS: pfSense ver 2.9
+- Load Balancers: HAProxy ver 3.4
 - Proxmox VE: 3-node cluster across 3 physical hosts with High Availability (HA), quorum management and split-brain  prevention
 - Multiple VMs: Ubuntu Server (CLI only), Win Server 2025, Mint Client, SUSE Server & Client, Fortinet Firewall (for tests), OPNsense (for tests)
 - Multiple Containers on Docker and Kubernetes with Portainer
 - Network: Pi-hole (local DNS), Nginx (Reverse Proxy)
 - Monitoring software: Grafana + Prometheus, Uptime Kuma
-- Firewall and router OS: pfSense ver 2.9
+
 
 
 Also, see the included network diagram for the current setup. 
@@ -78,4 +84,4 @@ NB: This is a living project and will evolve over time.
 
 
 
- -- 24 Sept 2026 --
+ -- 26 Sept 2026 --
