@@ -52,7 +52,7 @@ Hardware
 - 6° Headless Server: Lenovo ThinkCentre M910q: Intel i7, 16 GB RAM, 512 GB SSD
 - 7° Headless NAS Server: UGREEN NASync DH2300: ARM proc. with 8 cores, 2.2 GHz, 4 GB RAM, 32 GB eMMC System storage, 2x SATA bays, 1x 1GbE port, USB-C
   
-- Router / Access Point: TP-Link TL-WA3001 AS3000Mbps
+- Access Point: TP-Link TL-WA3001 AS3000Mbps
 - Primary managed switch: KeepLiNK 8x 2.5G + 1x 10G SFP  
 - Secondary unmanaged switch: NICGIGA 8x 2.5G + 2x 10G SFP+
 - NAS Storage: RAID 1 with 2x 4 TB HDDs
