@@ -1,0 +1,20 @@
+all:
+  children:
+
+    k3s:
+      hosts:
+        k3s-node1:
+          ansible_host: 10.10.1.107
+          ansible_user: user01
+          ansible_ssh_private_key_file: /home/user01/.ssh/id_ed25519
+
+        k3s-node2:
+          ansible_host: 10.10.1.105
+          ansible_user: user02
+          ansible_ssh_private_key_file: /home/user02/.ssh/id_ed25519
+
+        k3s-node3:
+          ansible_host: 10.10.1.106
+          ansible_user: user03
+          ansible_ssh_private_key_file: /home/user03/.ssh/id_ed25519
+ 
