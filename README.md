@@ -53,11 +53,9 @@ Hardware
 - 7° Headless NAS Server: UGREEN NASync DH2300: ARM proc. with 8 cores, 2.2 GHz, 4 GB RAM, 32 GB eMMC System storage, 2x SATA bays, 1x 1GbE port, USB-C
   
 - Access Point: TP-Link TL-WA3001 AS3000Mbps (with multiple SSIDs mapped to separate VLANs & subnets)
-- Primary managed switch: KeepLiNK 8x 2.5G + 1x 10G SFP  
-- Secondary unmanaged switch: NICGIGA 8x 2.5G + 2x 10G SFP+
+- Primary managed switch: KeepLiNK 2.5Gb/s + 10 Gb/s SPF, provides VLAN segmentation, PoE, and Link Aggregation (LAG) for increased bandwidth and redundancy
+- Secondary unmanaged switch: NICGIGA 8x 2.5G + 2x 10G SFP+ - Additional network ports for standard devices (no VLAN or aggregation) 
 - NAS Storage: RAID 1 with 2x 4 TB HDDs
-- Primary managed switch: 2.5Gb/s + 10 Gb/s SPF, provides VLAN segmentation, PoE, and Link Aggregation (LAG) for increased bandwidth and redundancy.
-- Secondary unmanaged switch: additional network ports for standard devices (no VLAN or aggregation) 
 - Patch panel: For structured Ethernet cabling
 - Two PDUs: Redundant power management and protection
 - KVM: for shared monitor, mouse and keyboard across all the servers when directly connected
