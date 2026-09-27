@@ -5,7 +5,7 @@ Proxmox HomeLab Docs
 
 This repository documents my personal home lab, used for testing and learning. 
 
-The Tech used includes Proxmox, pfSense, Ubuntu Server 26.04, VMs, K3s, Ansible, Grafana, Prometheus, Pi-hole, Portainer, and Uptime Kuma. 
+The Tech used includes Proxmox, pfSense, Ubuntu Server 26.04, VMs, Kubernetes (K3s), Ansible, Grafana, Prometheus, Portainer, and Uptime Kuma, Pi-hole (local DNS) and Nginx (reverse proxy). 
 It is used for system and networking experiments, and monitoring. 
 
 Detailed Description:
