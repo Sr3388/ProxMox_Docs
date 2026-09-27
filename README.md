@@ -40,6 +40,8 @@ Detailed Description:
 - 7° Headless NAS Server: UGREEN   
    *	Currently on UGREEN proprietary SW (UGOS Pro), handling the NAS Storage.
    *	Next steps will be to replace Ugreen SW with TrueNAS
+   *	This NAS is also used as a backup solution for my LXCs, VMs, and server data.
+
      
 Hardware
 --------
