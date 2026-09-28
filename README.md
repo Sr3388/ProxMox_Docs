@@ -38,7 +38,7 @@ Detailed Description:
    *	Next step will be to also monitor all Linux VMs, Kubernetes and Windows endpoints, with centralized security events, vulnerability detection and alerting.
 
 - 7° Headless Server: HP EliteDesk 800 mini:  
-   *	Jump host - Minimal Debian OS (Bookworm), hardened SSH, used to manage Proxmox, Kubernetes, managed switch and NAS.
+   *	Jump host - Minimal Debian OS (Bookworm Security), hardened SSH, used to manage Proxmox, Kubernetes, managed switch and NAS.
      
 - 8° Headless NAS Server: UGREEN   
    *	Currently on UGREEN proprietary SW (UGOS Pro), handling the NAS Storage.
@@ -74,7 +74,7 @@ Software
 - Proxmox VE: 3-node cluster across 3 physical hosts with High Availability (HA), quorum management and split-brain  prevention
 - Multiple VMs: Ubuntu Server (CLI only), Win Server 2025, Mint Client, SUSE Server & Client, Fortinet Firewall (for tests), OPNsense (for tests)
 - Multiple Containers on Docker and Kubernetes with Portainer
-- Jump host: Debian Bookworm, no GUI, CLI only, with minimal install, SSH-hardened
+- Jump host: Debian Bookworm Security, no GUI, CLI only, with minimal install, SSH-hardened
 - Network: Pi-hole (local DNS), Nginx (Reverse Proxy)
 - Monitoring software: Grafana + Prometheus, Uptime Kuma
 
