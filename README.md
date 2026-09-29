@@ -15,7 +15,7 @@ Detailed Description:
    *	Router and firewall on pfSense 
 
 - 2° Load Balancers: EliteDesk 800 G1 Mini
-   *  HAProxy deployed across 3 VMs simulating 3 independent Load Balancers for High Availability and redundancy.
+   *  HAProxy deployed across 2 VMs simulating 2 independent Load Balancers for High Availability and redundancy.
 
 - 3° Headless Server: Lenovo ThinkCentre M710:
    *	Proxmox hypervisor (Node 1), VMs, 
